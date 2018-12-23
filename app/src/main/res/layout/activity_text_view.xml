@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".TextViewActivity">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="@string/tv_1"/>
+
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:text="@string/tv_1"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="80dp"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/icon_arrow_off"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:text="@string/tv_1"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:paddingTop="15dp"
+        android:textSize="24sp"
+        android:text="@string/tv_1"/>
+
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:paddingTop="15dp"
+        android:textSize="24sp"
+        android:text="@string/tv_1"/>
+
+    <TextView
+        android:id="@+id/tv_6"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:paddingTop="15dp"
+        android:textSize="24sp"
+        android:text="@string/tv_1"/>
+
+    <TextView
+        android:id="@+id/tv_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:paddingTop="15dp"
+        android:textSize="24sp"
+        android:text="月小水长月小水长月小水长月小水长"
+
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+
+</LinearLayout>
