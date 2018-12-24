@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageViewActivity">
+    
+    <ImageView
+        android:id="@+id/iv1"
+        android:scaleType="fitXY"
+        android:layout_width="120dp"
+        android:background="#00ffff"
+        android:src="@drawable/imgview_test"
+        android:layout_height="80dp" />
+
+    <ImageView
+        android:id="@+id/iv2"
+        android:scaleType="fitCenter"
+        android:layout_width="120dp"
+        android:background="#00ffff"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/iv1"
+        android:src="@drawable/imgview_test"
+        android:layout_height="80dp" />
+
+    <ImageView
+        android:id="@+id/iv3"
+        android:scaleType="centerCrop"
+        android:layout_width="120dp"
+        android:background="#00ffff"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/iv2"
+        android:src="@drawable/imgview_test"
+        android:layout_height="80dp" />
+
+    <ImageView
+        android:id="@+id/iv4"
+        android:layout_width="120dp"
+        android:background="#00ffff"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/iv3"
+        android:src="@drawable/imgview_test"
+        android:layout_height="80dp" />
+
+
+
+</RelativeLayout>

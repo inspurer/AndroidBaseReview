@@ -18,4 +18,32 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Button"/>
+
+    <Button
+        android:id="@+id/btn_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="EditText"/>
+
+    <Button
+        android:id="@+id/btn_rb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="RadioButton"/>
+
+    <Button
+        android:id="@+id/btn_cb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="CheckBox"/>
+
+    <Button
+        android:id="@+id/btn_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ImageView"/>
 </LinearLayout>

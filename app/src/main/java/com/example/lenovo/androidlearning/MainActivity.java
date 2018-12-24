@@ -8,29 +8,71 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mtnTextView,mtnButton;
+    private Button mtnTextView, mtnButton, mtnEditText, mtnRadioButton,mtnCheckBox;
+
+    private Button mtnImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mtnTextView = findViewById(R.id.btn_tv);
-        mtnTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // 跳转到TextView显示界面
-                Intent intent = new Intent(MainActivity.this,TextViewActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
         mtnButton = findViewById(R.id.btn_btn);
-        mtnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ButtonActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
+        mtnEditText = findViewById(R.id.btn_et);
+
+
+        mtnRadioButton = findViewById(R.id.btn_rb);
+
+        mtnCheckBox = findViewById(R.id.btn_cb);
+
+        mtnImageView = findViewById(R.id.btn_iv);
+
+        setListener();
+
     }
+
+    public void setListener(){
+        onClick onclick = new onClick();
+        mtnTextView.setOnClickListener(onclick);
+        mtnButton.setOnClickListener(onclick);
+        mtnEditText.setOnClickListener(onclick);
+        mtnRadioButton.setOnClickListener(onclick);
+        mtnCheckBox.setOnClickListener(onclick);
+        mtnImageView.setOnClickListener(onclick);
+    }
+
+    private class onClick implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            int id = view.getId();
+            Intent intent = null;
+            switch (id){
+                case R.id.btn_tv:
+                    intent = new Intent(MainActivity.this, TextViewActivity.class);
+                    break;
+                case R.id.btn_btn:
+                    intent = new Intent(MainActivity.this, ButtonActivity.class);
+                    break;
+                case R.id.btn_et:
+                    intent = new Intent(MainActivity.this, EditTextActivity.class);
+                    break;
+                case R.id.btn_rb:
+                    intent = new Intent(MainActivity.this, RadioButtonActivity.class);
+                    break;
+                case R.id.btn_cb:
+                    intent = new Intent(MainActivity.this,CheckBoxActivity.class);
+                    break;
+                case R.id.btn_iv:
+                    intent = new Intent(MainActivity.this,ImageViewActivity.class);
+                    break;
+            }
+            startActivity(intent);
+        }
+    }
+
+
 }
