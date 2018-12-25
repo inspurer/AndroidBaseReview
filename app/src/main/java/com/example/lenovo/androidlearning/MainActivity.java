@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.lenovo.androidlearning.gridview.GridViewActivity;
+import com.example.lenovo.androidlearning.listview.ListViewAcitivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button mtnTextView, mtnButton, mtnEditText, mtnRadioButton,mtnCheckBox;
 
-    private Button mtnImageView;
+    private Button mtnImageView,mtnListView,mtnGridView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         mtnImageView = findViewById(R.id.btn_iv);
 
+        mtnListView = findViewById(R.id.btn_lv);
+
+        mtnGridView = findViewById(R.id.btn_gv);
+
         setListener();
 
     }
@@ -43,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         mtnRadioButton.setOnClickListener(onclick);
         mtnCheckBox.setOnClickListener(onclick);
         mtnImageView.setOnClickListener(onclick);
+        mtnListView.setOnClickListener(onclick);
+        mtnGridView.setOnClickListener(onclick);
     }
 
     private class onClick implements View.OnClickListener {
@@ -68,6 +78,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_iv:
                     intent = new Intent(MainActivity.this,ImageViewActivity.class);
+                    break;
+
+                case R.id.btn_lv:
+                    intent = new Intent(MainActivity.this,ListViewAcitivity.class);
+                    break;
+                case R.id.btn_gv:
+                    intent = new Intent(MainActivity.this,GridViewActivity.class);
                     break;
             }
             startActivity(intent);
