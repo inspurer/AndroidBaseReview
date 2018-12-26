@@ -8,12 +8,13 @@ import android.widget.Button;
 
 import com.example.lenovo.androidlearning.gridview.GridViewActivity;
 import com.example.lenovo.androidlearning.listview.ListViewAcitivity;
+import com.example.lenovo.androidlearning.recycleview.RecycleViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button mtnTextView, mtnButton, mtnEditText, mtnRadioButton,mtnCheckBox;
 
-    private Button mtnImageView,mtnListView,mtnGridView;
+    private Button mtnImageView,mtnListView,mtnGridView,mtnRecycleView;
 
 
     @Override
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
         mtnGridView = findViewById(R.id.btn_gv);
 
+        mtnRecycleView = findViewById(R.id.btn_recycleview);
+
         setListener();
 
     }
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         mtnImageView.setOnClickListener(onclick);
         mtnListView.setOnClickListener(onclick);
         mtnGridView.setOnClickListener(onclick);
+        mtnRecycleView.setOnClickListener(onclick);
     }
 
     private class onClick implements View.OnClickListener {
@@ -85,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_gv:
                     intent = new Intent(MainActivity.this,GridViewActivity.class);
+                    break;
+                case R.id.btn_recycleview:
+                    intent = new Intent(MainActivity.this,RecycleViewActivity.class);
                     break;
             }
             startActivity(intent);
